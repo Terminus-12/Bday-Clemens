@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -12,30 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/main.css">
-    <script src="js/main.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Elias Geburtstag</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Video</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Numbers</a>
-                </li>
-            </ul>
-            <a class="nav-link" href="#">Wer ist schon dabei?</a>
-            <button class="btn btn-success" type="button">JOIN NOW</button>
-        </div>
-    </div>
-</nav>
-
+<div include-html="nav"></div>
 
 <div class="content">
     <div class="video">
@@ -43,14 +23,9 @@
             <source src="res/vid/was_geht.mp4" type="video/mp4">
         </video>
     </div>
-
-    <div class="numbers">
-        <p class="">Schon</p>
-        <p class="huge">35</p>
-        <p class="big">SIND DABEI!</p>
-    </div>
 </div>
 
-
+<script src="js/include.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
