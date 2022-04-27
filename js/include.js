@@ -1,5 +1,5 @@
 
-const tmp_path = '../res/tmp/';
+const tmp_path = 'res/tmp/';
 
 function include_html() {
     const divs = document.getElementsByTagName("div")
