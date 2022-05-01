@@ -17,7 +17,7 @@ form.addEventListener('submit', async (e) => {
     try {
         const res = await register(formData)
 
-        if (res.status === 'success') {
+        if (res.status === 200) {
             direct_success()
         } else {
             redirect_error()

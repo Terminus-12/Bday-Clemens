@@ -9,3 +9,9 @@
     font-weight: bold;
     text-align: center;
 }
+
+.guests {
+    width: 400px;
+    text-align: center;
+    margin: 30px auto 0;
+}

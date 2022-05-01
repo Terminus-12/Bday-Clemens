@@ -14,3 +14,7 @@ function register(data) {
 function get_members() {
   return fetch(api_base + 'members')
 }
+
+function get_members_counter() {
+  return fetch(api_base + 'members_counter')
+}
