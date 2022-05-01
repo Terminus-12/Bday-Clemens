@@ -12,13 +12,16 @@
 <body>
 
 <div include-html="nav"></div>
+<div id="alert_error" class="form alert alert-danger" role="alert" style="display: none">
+    Error! Es gab einen Fehler bei der Anmeldung! Du bist noch nicht registriert!
+</div>
 
 <div class="form-intro">
     <p class="big"><b>Melde dich an!</b></p>
     <p>Damit stehst du automatisch auf der Gästeliste und bist dabei!</p>
 </div>
 
-<form class="form needs-validation">
+<form id="form_register" class="form needs-validation">
     <div class="mb-3">
         <label for="from_forename" class="form-label">Vorname</label>
         <input type="text" class="form-control" id="from_forename" placeholder="Max" required>
@@ -43,12 +46,20 @@
         </label>
     </div>
 
-    <button type="submit" class="btn btn-primary form-submit">Bestätigen</button>
+    <button id="button_submit" type="submit" class="btn btn-primary form-submit">
+        Bestätigen
+    </button>
+
+    <button id="button_loading" type="submit" class="btn btn-primary form-submit" style="display: none" disabled>
+        <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+        Fertigstellen
+    </button>
+
 </form>
 
-
-
 <script src="../js/include.js"></script>
+<script src="../js/api.js"></script>
 <script src="../js/main.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
