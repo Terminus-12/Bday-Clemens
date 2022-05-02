@@ -7,14 +7,6 @@ body {
     padding: 0;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-}
-
-
 
 .huge {
     font-size: 5em;
@@ -22,5 +14,19 @@ body {
 
 .big {
     font-size: 2em;
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+    float: left
+}
+
+.right {
+    text-align: right;
+    float: right
 }
 
