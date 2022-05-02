@@ -13,7 +13,28 @@
 </head>
 <body>
 
-<div include-html="nav"></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Elias Geburtstag</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/details/">Eckdaten im Detail</a>
+                </li>
+            </ul>
+            <div class="navbar-brand spinner-border text-secondary" role="status" style="display: none" id="nav_spinner"></div>
+            <a class="navbar me-lg-3" href="/wer-ist-dabei/">Wer ist schon dabei?</a>
+            <a class="btn btn-success" type="button" href="/join/">JOIN NOW</a>
+        </div>
+    </div>
+</nav>
+
 <div id="alert_error" class="form alert alert-danger" role="alert" style="display: none">
     Error! Es gab einen Fehler bei der Anmeldung! Du bist noch nicht registriert!
 </div>
@@ -26,23 +47,23 @@
 <form id="form_register" class="form needs-validation">
     <div class="mb-3">
         <label for="from_forename" class="form-label">Vorname</label>
-        <input type="text" class="form-control" id="from_forename" placeholder="Max" required>
+        <input type="text" class="form-control" id="from_forename" placeholder="Max" name="forename" required>
     </div>
 
     <div class="mb-3">
         <label for="from_surname" class="form-label">Nachname</label>
-        <input type="text" class="form-control" id="from_surname" placeholder="Mustermann" required>
+        <input type="text" class="form-control" id="from_surname" placeholder="Mustermann" name="surname" required>
     </div>
 
     <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="form_check_sleep">
+        <input class="form-check-input" type="checkbox" id="form_check_sleep" name="need_bed">
         <label class="form-check-label" for="form_check_sleep">
             Ich brauche einen Schlafplatz
         </label>
     </div>
 
     <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+        <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="is_nerd">
         <label class="form-check-label" for="flexCheckDefault">
             Ich will bei einem nerdigen Spiel teilnehmen
         </label>
@@ -59,9 +80,7 @@
 
 </form>
 
-<script src="../js/include.js"></script>
 <script src="../js/api.js"></script>
-<script src="../js/main.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

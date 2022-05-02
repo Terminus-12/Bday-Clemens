@@ -17,7 +17,27 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<div include-html="nav"></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Elias Geburtstag</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/details/">Eckdaten im Detail</a>
+                </li>
+            </ul>
+            <div class="navbar-brand spinner-border text-secondary" role="status" style="display: none" id="nav_spinner"></div>
+            <a class="navbar me-lg-3" href="/wer-ist-dabei/">Wer ist schon dabei?</a>
+            <a class="btn btn-success" type="button" href="/join/">JOIN NOW</a>
+        </div>
+    </div>
+</nav>
 
 <div class="content">
     <div class="video">
@@ -53,16 +73,18 @@
         </div>
 
         <div class="add left">
-            <p class="capture big"><b>Grillen mit Ausblick auf der Dachterasse!</b></p>
+            <p class="capture big"><b>Große Getränkewahl zum kleinen Preis!</b></p>
+            <img src="res/img/drinks.png" alt="Billard" width="600px">
         </div>
 
         <div class="add right">
+            <p class="capture big"><b>Grillen mit Ausblick auf der Dachterasse!</b></p>
+        </div>
+
+        <div class="add left">
             <p class="capture big"><b>Der Klassenkampf in ganz neuer Form!</b></p>
         </div>
     </div>
 </div>
-
-<script src="js/include.js"></script>
-<script src="js/main.js"></script>
 </body>
 </html>
