@@ -7,6 +7,9 @@ body {
     padding: 0;
 }
 
+.handwritten {
+    font-family: 'Caveat', cursive;
+}
 
 .huge {
     font-size: 5em;
