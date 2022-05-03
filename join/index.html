@@ -56,16 +56,23 @@
     </div>
 
     <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="form_check_sleep" name="need_bed">
+        <input class="form-check-input" type="checkbox" id="form_check_sleep" name="need_bed" onclick="toggle_modal_need_bed()" data-bs-target="#modal_need_bed">
         <label class="form-check-label" for="form_check_sleep">
             Ich brauche einen Schlafplatz
         </label>
     </div>
 
     <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="flexCheckDefault" name="is_nerd">
-        <label class="form-check-label" for="flexCheckDefault">
+        <input class="form-check-input" type="checkbox" id="form_check_nerd" name="is_nerd" onclick="toggle_modal_nerd()">
+        <label class="form-check-label" for="form_check_nerd">
             Ich will bei einem nerdigen Spiel teilnehmen
+        </label>
+    </div>
+
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="form_check_anonym" name="anonym">
+        <label class="form-check-label" for="form_check_anonym">
+            Ich möchte <b>nicht</b> in der <a href="/wer-ist-dabei/">öffentlichen Gästeliste</a> gelistet werden
         </label>
     </div>
 
@@ -77,8 +84,45 @@
         <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
         Fertigstellen
     </button>
-
 </form>
+
+<!-- Modal need_bed -->
+<div class="modal fade" id="modal_need_bed" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><b>Achtung!</b></h5>
+            </div>
+            <div class="modal-body">
+                Die Schlafplätze sind streng limitiert und sollten nur von Gästen benutzt werden,
+                die einen wirklich langen Weg nach Hause haben. Wenn du in Karlsruhe oder naher Umgebung wohnst,
+                wäre es gut, von einem Schlafplatz abzusehen!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Verstanden!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal need_bed -->
+<div class="modal fade" id="modal_nerd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title"><b>Achtung!</b></h5>
+            </div>
+            <div class="modal-body">
+                Dieses Spiel ist nur für Hardcore-Nerds geeignet und stellt eine Meta-Ebene über mehrere Stunden des Geburtstags dar!<br>
+                Wenn du also eher chillen willst, dann ist dieses Spiel wahrscheinlich nichts für dich!
+                Wenn du aber auf Spiele wie <i>Secret Hitler</i> stehst, dann bist du herzlich eingeladen!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Verstanden!</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="../js/api.js"></script>
 <script src="script.js"></script>
