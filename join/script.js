@@ -13,14 +13,25 @@ if (new URLSearchParams(window.location.search).get('status') === 'error') {
   alert.style.display = 'block'
 }
 
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
     btn_submit.style.display = 'none'
     btn_loading.style.display = 'block'
 
-    const formData = new FormData(form).entries()
+    const form_data = new FormData(form)
+    const data = {}
+    for (const form_keys of form_data.keys()) {
+        data[form_keys] = form_data.get(form_keys)
+    }
+
     try {
-        const res = await register(formData)
+        const res = register(data)
+        res.then(res => console.log(res))
 
         if (res.status === 200) {
             direct_success()
@@ -34,11 +45,11 @@ form.addEventListener('submit', async (e) => {
 })
 
 function redirect_error() {
-    window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1) + '?status=error'
+    // window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1) + '?status=error'
 }
 
 function direct_success() {
-    window.location.href = window.location.origin + '/wer-ist-dabei?status=success'
+    // window.location.href = window.location.origin + '/wer-ist-dabei?status=success'
 }
 
 function toggle_modal_need_bed() {
