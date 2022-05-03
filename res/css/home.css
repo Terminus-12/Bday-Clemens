@@ -40,23 +40,23 @@
 }
 
 #arrow-up {
-    -webkit-animation: mover-down 2s infinite alternate;
-    animation: mover-down 2s infinite alternate;
+    -webkit-animation: mover-down 1.5s infinite alternate;
+    animation: mover-down 1.5s infinite alternate;
 }
 
 #arrow-down {
-    -webkit-animation: mover-up 2s infinite alternate;
-    animation: mover-up 2s infinite alternate;
+    -webkit-animation: mover-up 1.5s infinite alternate;
+    animation: mover-up 1.5s infinite alternate;
 }
 
 #arrow-left {
-    -webkit-animation: mover-right 2s infinite alternate;
-    animation: mover-right 2s infinite alternate;
+    -webkit-animation: mover-right 1.5s infinite alternate;
+    animation: mover-right 1.5s infinite alternate;
 }
 
 #arrow-right {
-    -webkit-animation: mover-left 2s infinite alternate;
-    animation: mover-left 2s infinite alternate;
+    -webkit-animation: mover-left 1.5s infinite alternate;
+    animation: mover-left 1.5s infinite alternate;
 }
 
 @-webkit-keyframes mover-down {
