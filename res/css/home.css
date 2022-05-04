@@ -14,11 +14,15 @@
 
 .adds {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
 }
 
 .add {
-
+    width: 600px;
+    margin: 20px 0;
 }
 
 .capture {
