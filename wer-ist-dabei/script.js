@@ -16,7 +16,7 @@ async function set_counter() {
     try {
         const res = await get_members_counter()
         if (res.status === 200) {
-            counter.innerHTML = res.data.counter
+            counter.innerHTML = await res.text()
 
         } else {
             print_alert_error()
@@ -33,7 +33,7 @@ async function fill_table() {
         const res = await get_members()
 
         if (res.status === 200) {
-            const guests = res.data.guests
+            const guests = await res.json()
             guests.forEach(guest => {
                 const row = table.insertRow(-1)
                 const cell_forename = row.insertCell(0)

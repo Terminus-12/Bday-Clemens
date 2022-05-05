@@ -12,9 +12,9 @@ async function add_member(data) {
 }
 
 async function get_members() {
-    return await fetch(api_base + 'members')
+    return fetch(api_base + 'members/public')
 }
 
 async function get_members_counter() {
-    return await fetch(api_base + 'members_count')
+    return fetch(api_base + 'members/count')
 }
