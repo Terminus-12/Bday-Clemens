@@ -1,6 +1,7 @@
 
 const form = document.querySelector('#form_register')
-const alert = document.querySelector('#alert_error')
+const alert_error = document.querySelector('#alert_error')
+const alert_invalid_name = document.querySelector('#alert_invalid_name')
 const btn_submit = document.querySelector('#button_submit')
 const btn_loading = document.querySelector('#button_loading')
 
@@ -10,7 +11,7 @@ let modal_nerd_first_toggle = true
 const modal_nerd = document.querySelector('#modal_nerd')
 
 if (new URLSearchParams(window.location.search).get('status') === 'error') {
-  alert.style.display = 'block'
+  alert_error.style.display = 'block'
 }
 
 const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
@@ -20,18 +21,31 @@ const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
+    const form_data = new FormData(form)
+    const regex_name =  /^([a-z]| |\.|ö|ä|ü|ß|'|-)+$/i
+
+    if (!regex_name.test(form_data.get("forename"))
+        || !regex_name.test(form_data.get("surname"))) {
+        return alert_invalid_name.style.display = 'block'
+    }
+
     btn_submit.style.display = 'none'
     btn_loading.style.display = 'block'
 
-    const form_data = new FormData(form)
-    const data = {}
-    for (const form_keys of form_data.keys()) {
-        data[form_keys] = form_data.get(form_keys)
+    const form_body_urlencoded = []
+    for (const form_key of form_data.keys()) {
+        const encoded_key = encodeURIComponent(form_key)
+        const encoded_value = encodeURIComponent(form_data.get(form_key))
+        form_body_urlencoded.push(encoded_key + "=" + encoded_value.trim())
+    }
+
+    const form_body_json = {}
+    for (const form_key of form_data.keys()) {
+        form_body_json[form_key] = form_data.get(form_key)
     }
 
     try {
-        const res = register(data)
-        res.then(res => console.log(res))
+        const res = await add_member(form_body_urlencoded.join('&'))
 
         if (res.status === 200) {
             direct_success()
