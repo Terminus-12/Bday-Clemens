@@ -5,6 +5,7 @@
 const form = document.querySelector('#form_register')
 const alert_error = document.querySelector('#alert_error')
 const alert_invalid_name = document.querySelector('#alert_invalid_name')
+const alert_not_acceptable = document.querySelector('#alert_not_acceptable')
 const btn_submit = document.querySelector('#button_submit')
 const btn_loading = document.querySelector('#button_loading')
 
@@ -27,7 +28,7 @@ if (new URLSearchParams(window.location.search).get('status') === 'error') {
   alert_error.style.display = 'block'
 
 } else if (new URLSearchParams(window.location.search).get('status') === 'not_acceptable') {
-  alert_error.style.display = 'block'
+    alert_not_acceptable.style.display = 'block'
 }
 // ----------------------------------------------------------------------------
 
