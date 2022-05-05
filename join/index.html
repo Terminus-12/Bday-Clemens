@@ -15,6 +15,7 @@
 </head>
 <body>
 
+<!-- Nav ------------------------------------------------------->
 <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">Elias Geburtstag</a>
@@ -39,7 +40,10 @@
         </div>
     </div>
 </nav>
+<!----------------------------------------------------------------->
 
+
+<!-- Alerts ------------------------------------------------------->
 <div id="alert_error" class="form alert alert-danger" role="alert" style="display: none">
     Error! Es gab einen Fehler bei der Anmeldung! Du bist noch nicht registriert!
 </div>
@@ -49,6 +53,13 @@
     Leerzeichen, Punkt, Strich, Apostroph (')
 </div>
 
+<div id="alert_not_acceptable" class="form alert alert-danger" role="alert" style="display: none">
+    Error! Dieser Name ist schon in der Datenbank vorhanden!
+</div>
+<!----------------------------------------------------------------->
+
+
+<!-- From ------------------------------------------------------->
 <div class="form-intro">
     <p class="big"><b>Melde dich an!</b></p>
     <p>Damit stehst du automatisch auf der Gästeliste und bist dabei!</p>
@@ -95,8 +106,10 @@
         Fertigstellen
     </button>
 </form>
+<!----------------------------------------------------------------->
 
-<!-- Modal need_bed -->
+
+<!-- Modals ------------------------------------------------------->
 <div class="modal fade" id="modal_need_bed" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -115,7 +128,6 @@
     </div>
 </div>
 
-<!-- Modal need_bed -->
 <div class="modal fade" id="modal_nerd" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -133,6 +145,7 @@
         </div>
     </div>
 </div>
+<!----------------------------------------------------------------->
 
 <script src="../res/js/api.js"></script>
 <script src="script.js"></script>

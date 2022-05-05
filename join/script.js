@@ -1,4 +1,7 @@
 
+// ----------------------------------------------------------------------------
+// Get/Set HTML elements
+// ----------------------------------------------------------------------------
 const form = document.querySelector('#form_register')
 const alert_error = document.querySelector('#alert_error')
 const alert_invalid_name = document.querySelector('#alert_invalid_name')
@@ -10,15 +13,28 @@ const modal_need_bed = document.querySelector('#modal_need_bed')
 let modal_nerd_first_toggle = true
 const modal_nerd = document.querySelector('#modal_nerd')
 
-if (new URLSearchParams(window.location.search).get('status') === 'error') {
-  alert_error.style.display = 'block'
-}
-
 const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
 })
+// ----------------------------------------------------------------------------
 
+
+// ----------------------------------------------------------------------------
+// Read Status-Codes
+// ----------------------------------------------------------------------------
+if (new URLSearchParams(window.location.search).get('status') === 'error') {
+  alert_error.style.display = 'block'
+
+} else if (new URLSearchParams(window.location.search).get('status') === 'not_acceptable') {
+  alert_error.style.display = 'block'
+}
+// ----------------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------------------
+// From Controls
+// ----------------------------------------------------------------------------
 form.addEventListener('submit', async (e) => {
     e.preventDefault()
     const form_data = new FormData(form)
@@ -39,16 +55,13 @@ form.addEventListener('submit', async (e) => {
         form_body_urlencoded.push(encoded_key + "=" + encoded_value.trim())
     }
 
-    const form_body_json = {}
-    for (const form_key of form_data.keys()) {
-        form_body_json[form_key] = form_data.get(form_key)
-    }
-
     try {
         const res = await add_member(form_body_urlencoded.join('&'))
 
         if (res.status === 200) {
-            direct_success()
+            redirect_success()
+        } else if (res.status === 406) {
+            redirect_not_acceptable()
         } else {
             redirect_error()
         }
@@ -57,15 +70,29 @@ form.addEventListener('submit', async (e) => {
         redirect_error()
     }
 })
+// ----------------------------------------------------------------------------
 
+
+// ----------------------------------------------------------------------------
+// Redirects
+// ----------------------------------------------------------------------------
 function redirect_error() {
-    // window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1) + '?status=error'
+    window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1) + '?status=error'
 }
 
-function direct_success() {
-    // window.location.href = window.location.origin + '/wer-ist-dabei?status=success'
+function redirect_success() {
+    window.location.href = window.location.origin + '/wer-ist-dabei?status=success'
 }
 
+function redirect_not_acceptable() {
+    window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/") + 1) + '?status=not_acceptable'
+}
+// ----------------------------------------------------------------------------
+
+
+// ----------------------------------------------------------------------------
+// Modal triggers
+// ----------------------------------------------------------------------------
 function toggle_modal_need_bed() {
     if (modal_bed_first_toggle) {
         const modal = new bootstrap.Modal(modal_need_bed);
@@ -81,3 +108,4 @@ function toggle_modal_nerd() {
         modal_nerd_first_toggle = false
     }
 }
+// ----------------------------------------------------------------------------
