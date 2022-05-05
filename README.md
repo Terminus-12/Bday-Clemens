@@ -1,2 +1,2 @@
-# Birthday-Page (WIP)
+# Birthday-Page
 Personal Web-Page for my Birthday.
