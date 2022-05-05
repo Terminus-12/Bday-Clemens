@@ -57,6 +57,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         const res = await add_member(form_body_urlencoded.join('&'))
+        console.log(res)
 
         if (res.status === 200) {
             redirect_success()
