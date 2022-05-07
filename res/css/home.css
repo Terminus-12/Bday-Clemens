@@ -6,10 +6,10 @@
 }
 
 .video {
-    width: min(800px, 90vw);
     display: flex;
     flex-direction: column;
-    padding: 30px 0;
+    width: min(800px, 90vw);
+    margin: 30px 0;
     align-self: center;
 }
 
