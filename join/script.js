@@ -40,13 +40,14 @@ form.addEventListener('submit', async (e) => {
     e.preventDefault()
     const form_data = new FormData(form)
     const regex_name =  /^([a-z]| |\.|ö|ä|ü|ß|'|-)+$/i
-    const regex_not_empty = /[a-z]|ö|ä|ü|ß/gi
+    const forename = form_data.get("forename").trim()
+    const surname = form_data.get("surname").trim()
 
-    if (!regex_name.test(form_data.get("forename"))
-        || !regex_name.test(form_data.get("surname"))
-        || !regex_not_empty.test(form_data.get("forename"))
-        || !regex_not_empty.test(form_data.get("surname"))
-        || (form_data.get("forename").length + form_data.get("surname").length) >= 40) {
+    if (forename.length === 0
+        || surname.length === 0
+        || (forename.length + surname.length) >= 40
+        || !regex_name.test(forename)
+        || !regex_name.test(surname)) {
         return alert_invalid_name.style.display = 'block'
     }
 
