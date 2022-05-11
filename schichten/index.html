@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Wer ist schon dabei?</title>
+    <title>Schichtplan</title>
 
     <meta name="viewport" content= "width=device-width, initial-scale=0.75">
     <meta name="robots" content="noindex">
@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="../res/css/main.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../res/css/home.css">
 </head>
 <body>
 
@@ -43,30 +43,22 @@
     </div>
 </nav>
 
-<div class="alert alert-success" role="alert" id="alert_success"  style="text-align: center; display: none">
-    Du hast dich erfolgreich registriert!
-</div>
-<div class="alert alert-danger" role="alert" id="alert_error" style="text-align: center; display: none">
-    Error! Cannot fetch bday_members!
+<p class="capture center huge handwritten"><b>Schichtplan</b></p>
+
+<p class="center">
+    Du willst mir bei meinem Geburtstag unter die Arme greifen?<br>
+    Sehr gut! Dann trage dich gerne unten in eine Schicht ein!
+</p>
+
+<div class="arrows">
+    <img id="arrow-down" class="arrow" src="../res/svg/arrow-down-circle-fill.svg" alt="arrow-down">
+    <div>
+        <img id="arrow-right" class="arrow" src="../res/svg/arrow-right-circle-fill.svg" alt="arrow-right">
+        <a class="btn btn-success join_margin" type="button" href="https://nuudel.digitalcourage.de/kids-bday-tTADLGGaQ5aUSou6JZdX0Rg0U74SXI">Wähle deine Schicht!</a>
+        <img id="arrow-left" class="arrow" src="../res/svg/arrow-left-circle-fill.svg" alt="arrow-left">
+    </div>
+    <img id="arrow-up" class="arrow" src="../res/svg/arrow-up-circle-fill.svg" alt="arrow-up">
 </div>
 
-<div class="numbers">
-    <p class="">Schon</p>
-    <p id="member_count" class="huge">??</p>
-    <p class="big">SIND DABEI!</p>
-</div>
-
-<div class="guests">
-    <p class="big text-decoration-underline"><b>Gästeliste</b></p>
-    <table id="table_guests" class="guests table table-striped">
-        <tr>
-            <th scope="col">Vorname</th>
-            <th scope="col">Nachname</th>
-        </tr>
-    </table>
-</div>
-
-<script src="../res/js/api.js"></script>
-<script src="script.js"></script>
 </body>
 </html>
