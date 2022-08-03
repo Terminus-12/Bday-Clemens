@@ -1,5 +1,6 @@
 <template>
     <div class="content">
+
         <div class="video">
             <video :src="video" volume="0.5" controls></video>
 
@@ -77,7 +78,7 @@ export default {
             },
             {
                 title: "Der Klassenkampf in ganz neuer Form!",
-                desc: "Zwei Teams kämpfen gegeneinander in Kampf-, Gewinn- oder eigenen Spielen, um anteilig mehr von einem Preis zu gewinnen! Erfahre mehr in den <a href=\"/details#wie-funktioniert-der-klassenkampf\">Details</a>!",
+                desc: "Zwei Teams kämpfen gegeneinander in Kampf-, Gewinn- oder eigenen Spielen, um anteilig mehr von einem Preis zu gewinnen! Erfahre mehr in den <router-link to=\"/details#wie-funktioniert-der-klassenkampf\">Details</router-link>!",
                 img: "img/fight.JPG"
             },
             {

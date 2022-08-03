@@ -9,8 +9,8 @@ export default {
 </script>
 
 <template>
-    <Navbar/>
-    <Home />
+    <Navbar></Navbar>
+    <router-view></router-view>
 </template>
 
 <style scoped>

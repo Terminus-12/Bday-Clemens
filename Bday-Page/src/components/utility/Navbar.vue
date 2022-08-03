@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Elias Geburtstag</a>
+            <router-link class="navbar-brand" to="/">Elias Geburtstag</router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,22 +10,22 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <router-link class="nav-link" to="/">Home</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/details">Details</a>
+                        <router-link class="nav-link" to="/details">Details</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/schichten">Schichten</a>
+                        <router-link class="nav-link" to="/schichten">Schichten</router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/privacy">Datenschutz</a>
+                        <router-link class="nav-link" to="/privacy">Datenschutz</router-link>
                     </li>
                 </ul>
                 <div class="navbar-brand spinner-border text-secondary" role="status" style="display: none"
                      id="nav_spinner"></div>
-                <a class="navbar me-lg-3" href="/wer-ist-dabei">Wer ist schon dabei?</a>
-                <a class="btn btn-success" type="button" href="/join">JOIN NOW</a>
+                <router-link class="navbar me-lg-3" to="/wer-ist-dabei">Wer ist schon dabei?</router-link>
+                <router-link class="btn btn-success" type="button" to="/join">JOIN NOW</router-link>
             </div>
         </div>
     </nav>
