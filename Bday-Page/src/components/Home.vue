@@ -1,0 +1,236 @@
+<template>
+    <div class="content">
+        <div class="video">
+            <video :src="video" volume="0.5" controls></video>
+
+            <p class="capture big center">
+                <b >{{ video_sub }}</b>
+            </p>
+        </div>
+
+        <p class="capture center huge handwritten"><b>{{ adds_title }}</b></p>
+
+        <div class="adds">
+            <div v-for="add in adds" class="add card">
+                <img v-if='add.img !== ""' class="card-img-top" :src="add.img" :alt="add.title" width="600">
+                <div class="card-body">
+                    <p class="card-title capture big"><b>{{ add.title }}</b></p>
+                    <p class="card-text" v-html="add.desc"></p>
+                </div>
+            </div>
+        </div>
+
+        <p class="capture center huge handwritten"><b>{{ join_title }}</b></p>
+
+        <div class="arrows">
+            <img id="arrow-down" class="arrow" src="/svg/arrow-down-circle-fill.svg" alt="arrow-down">
+            <div>
+                <img id="arrow-right" class="arrow" src="/svg/arrow-right-circle-fill.svg" alt="arrow-right">
+                <a class="btn btn-success join_margin" type="button" href="/archive/joinive/join">{{ join }}</a>
+                <img id="arrow-left" class="arrow" src="/svg/arrow-left-circle-fill.svg" alt="arrow-left">
+            </div>
+            <img id="arrow-up" class="arrow" src="/svg/arrow-up-circle-fill.svg" alt="arrow-up">
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "Home",
+    data() {
+        return {
+            video: "vid/was_geht.mp4",
+            video_sub: "Halte dir die Nacht vom 03. auf den 04. Juni frei!",
+
+            adds_title: "Was erwartet dich?",
+            adds: [
+            {
+                title: "Karaoke (Ultrastar)",
+                desc: "Lass deine Stimmbänder zu epischer Karaoke vibrieren - mit einer Songauswahl von über 5.000 Songs an 4 Mikros bis 1 Uhr!<br>" +
+                    "Song Liste: <a href=\"https://schaut.dev/p/ultrastar/\">https://schaut.dev/p/ultrastar/</a>",
+                img: "img/karaoke.jpg"
+            },
+            {
+                title: "Club-Atmosphere mit Lightshow!",
+                desc: "Erlebe ab 1:30 Uhr einen epischen Dancefloor mit immersiver Lightshow. Wir haben Nebel, Strobo, über 1000 einzeln ansteuerbare RGB-Leuchten, banger Boxen und vllt einen DJ!",
+                img: "img/dj.png"
+            },
+            {
+                title: "Freies Billard die ganze Nacht!",
+                desc: "Du wolltest mal wieder Billard spielen, aber nicht dafür zahlen? Perfekt! Während des gesamten Geburtstags kannst du kostenfrei so viel Billard spielen, wie du willst. Wir haben brandneue Bälle und ein semi anständiges Queue-Set!",
+                img: "img/billard.png"
+            },
+            {
+                title: "Grillen mit Ausblick auf der Dachterrasse!",
+                desc: "Wir haben den besten Grillminister am Start, der bis Mitternacht eure mitgebrachten Köstlichkeiten auf den Grill schmeißt! Einfaches Grillgut wie Baguettes, Würstchen werden sogar kostenlos zur Verfügung gestellt. Wunderschöner knallroter Sonnenuntergang und Ausblick auf Wald und Wiese inklusive!",
+                img: "img/grill.JPG"
+            },
+            {
+                title: "Freibier (gezapft)",
+                desc: "Genieße frisch gezapftes Bier völlig frei (solange der Vorrat reicht)! Zusätzlich kann auch Zitronenlimonade eingemischt werden, um frisches Radler genießen zu können.",
+                img: "img/zapfe.jpg"
+            },
+            {
+                title: "Große Getränkewahl zum kleinen Preis!",
+                desc: "Die K2-Bar hat eine große Auswahl vielfältiger Getränke, die zum kleinen Preis genossen werden können.\nDenkt also daran, auch etwas Kleingeld mitzunehmen!<br>Getränkekarte in höherer Auflösung: [<a href=\"/img/drinks_full.png\">png</a>]",
+                img: "img/drinks.png"
+            },
+            {
+                title: "Der Klassenkampf in ganz neuer Form!",
+                desc: "Zwei Teams kämpfen gegeneinander in Kampf-, Gewinn- oder eigenen Spielen, um anteilig mehr von einem Preis zu gewinnen! Erfahre mehr in den <a href=\"/details#wie-funktioniert-der-klassenkampf\">Details</a>!",
+                img: "img/fight.JPG"
+            },
+            {
+                title: "Supergeheimes Meta-Programm für Hardcore-Nerds!",
+                desc: "Für die richtigen Hardcore-Nerds ist ein Meta-Programm parallel zum Geburtstag zum Spielen vorhanden. Wer teilnehmen will, muss bei der Anmeldung auf dieser Website den Haken <i>Ich will bei einem nerdigen Spiel teilnehmen</i> setzten",
+                img: "img/mystery.png"
+            }],
+
+            join_title: "Registriere dich jetzt!",
+            join: "JOIN NOW"
+        }
+    }
+}
+</script>
+
+<style scoped>
+.content {
+    margin: 0 20px 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    width: min(800px, 90vw);
+    margin: 30px 0;
+    align-self: center;
+}
+
+.adds {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.add {
+    width: 600px;
+    margin: 20px 0;
+}
+
+.capture {
+    padding: 10px 0;
+}
+
+.join_margin {
+    margin: 30px;
+}
+
+/* --------------------------------------------- */
+/* Arrows & Moves */
+/* --------------------------------------------- */
+.arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#arrow-up {
+    -webkit-animation: mover-down 1.5s infinite alternate;
+    animation: mover-down 1.5s infinite alternate;
+}
+
+#arrow-down {
+    -webkit-animation: mover-up 1.5s infinite alternate;
+    animation: mover-up 1.5s infinite alternate;
+}
+
+#arrow-left {
+    -webkit-animation: mover-right 1.5s infinite alternate;
+    animation: mover-right 1.5s infinite alternate;
+}
+
+#arrow-right {
+    -webkit-animation: mover-left 1.5s infinite alternate;
+    animation: mover-left 1.5s infinite alternate;
+}
+
+@-webkit-keyframes mover-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes mover-down {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+@-webkit-keyframes mover-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes mover-up {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+@-webkit-keyframes mover-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@keyframes mover-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20px);
+    }
+}
+
+@-webkit-keyframes mover-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes mover-right {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+/* --------------------------------------------- */
+
+</style>
