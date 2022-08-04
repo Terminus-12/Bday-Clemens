@@ -24,7 +24,7 @@
                 </ul>
                 <div class="navbar-brand spinner-border text-secondary" role="status" style="display: none"
                      id="nav_spinner"></div>
-                <router-link class="navbar me-lg-3" to="/wer-ist-dabei">Wer ist schon dabei?</router-link>
+                <router-link class="navbar me-lg-3" to="/guests">Wer ist schon dabei?</router-link>
                 <router-link class="btn btn-success" type="button" to="/join">JOIN NOW</router-link>
             </div>
         </div>
