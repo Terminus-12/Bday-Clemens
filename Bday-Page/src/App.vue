@@ -1,5 +1,5 @@
 <script>
-import Navbar from "./components/utility/Navbar.vue";
+import Navbar from "./components/util/Navbar.vue";
 import Home from "./components/Home.vue";
 
 export default {
