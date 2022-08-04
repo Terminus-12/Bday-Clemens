@@ -1,2 +1,2 @@
 # Birthday-Page
-Personal Web-Page for my Birthday.
+[Vue](https://vuejs.org/) based Web-Page used as demo for my [untitled event project](https://github.com/EliasSchaut/untitled-event-invite).
