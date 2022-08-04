@@ -16,7 +16,7 @@
                         <router-link class="nav-link" to="/details">Details</router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link class="nav-link" to="/schichten">Schichten</router-link>
+                        <router-link class="nav-link" to="/help">Schichten</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" to="/privacy">Datenschutz</router-link>
