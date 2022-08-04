@@ -55,18 +55,17 @@ export default {
             }
         }
     },
-    async created() {
-        await set_guest_counter(this.guests.count);
-        await fill_guest_list(this.guests.list);
+    created() {
+        set_guest_counter(this.guests.count, this.api_base)
+        fill_guest_list(this.guests.list, this.api_base)
     }
 }
 
-async function set_guest_counter(counter) {
+async function set_guest_counter(counter, api_base) {
     try {
-        const res = await get_members_counter()
+        const res = await get_members_counter(api_base)
         if (res.status === 200) {
-            //counter.value = await res.text();
-            counter.value = "5"
+            counter.value = await res.text()
 
         } else {
             print_alert_error()
@@ -78,18 +77,12 @@ async function set_guest_counter(counter) {
     }
 }
 
-async function fill_guest_list(list) {
+async function fill_guest_list(list, api_base) {
     try {
-        const res = await get_members()
+        const res = await get_members(api_base)
 
         if (res.status === 200) {
-            //list.value = await res.json()
-            list.value = [
-                {
-                    forename: "Max",
-                    surname: "Mustermann"
-                }
-            ]
+            list.value = await res.json()
 
 
         } else {
