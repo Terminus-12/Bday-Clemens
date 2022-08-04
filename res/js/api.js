@@ -1,5 +1,5 @@
 
-const api_base = 'https://bday-api.kobert.dev/bday/'
+const api_base = 'https://api.schaut.dev/bday/'
 
 async function add_member(data) {
     return fetch(api_base + 'member', {
