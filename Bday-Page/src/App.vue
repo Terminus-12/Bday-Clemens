@@ -1,9 +1,8 @@
 <script>
 import Navbar from "./components/util/Navbar.vue";
-import Home from "./components/Home.vue";
 
 export default {
-    components: {Home, Navbar}
+    components: { Navbar }
 }
 
 </script>
