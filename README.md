@@ -1,4 +1,4 @@
-# Birthday-Page
+# Web-Invite-Demo
 Personal static Web-Invite for my Birthday.
 
 This Website needs my [Web-Api](https://github.com/EliasSchaut/Web-Api), to run correctly
