@@ -36,7 +36,7 @@ jobs:
         # Your reponame
         reponame: Web-Invite-Demo
         # Your Github token
-        token: ${{ TOKEN_GITHUB }}
+        token: ${{ secrets.TOKEN_GITHUB }}
         # Your git commit email
         gitemail: e.schaut@outlook.de
         # Your git commit name
