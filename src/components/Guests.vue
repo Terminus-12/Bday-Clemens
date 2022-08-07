@@ -1,8 +1,10 @@
 <template>
-    <div v-if="$route.params.status === 'success'" class="alert alert-success" role="alert" id="alert_success" style="text-align: center">
+    <div v-if="$route.params.status === 'success'" class="alert alert-success" role="alert" id="alert_success"
+         style="text-align: center">
         {{ this.status.success }}
     </div>
-    <div v-if="$route.params.status === 'error'" class="alert alert-danger" role="alert" id="alert_error" style="text-align: center">
+    <div v-if="$route.params.status === 'error'" class="alert alert-danger" role="alert" id="alert_error"
+         style="text-align: center">
         {{ this.status.error }}
     </div>
 
@@ -15,21 +17,25 @@
     <div class="guests">
         <p class="big text-decoration-underline"><b> {{ this.guests.title }} </b></p>
         <table class="table table-striped">
+            <thead>
             <tr>
                 <th scope="col">{{ this.guests.forename }}</th>
                 <th scope="col">{{ this.guests.surname }}</th>
             </tr>
+            </thead>
+            <tbody>
             <tr v-for="guest in this.guests.list.value">
                 <td>{{ guest.forename }}</td>
                 <td>{{ guest.surname }}</td>
             </tr>
+            </tbody>
         </table>
     </div>
 </template>
 
 <script>
-import { get_members, get_members_counter } from '../assets/js/api.js';
-import { ref } from 'vue'
+import {get_members, get_members_counter} from '../assets/js/api.js';
+import {ref} from 'vue'
 
 export default {
     name: "Guests",
