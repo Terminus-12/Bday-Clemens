@@ -4,43 +4,37 @@
             <h3>Impressum</h3>
 
             <p>Angaben gemäß § 5 TMG</p>
-            <p>Elias Schaut <br>
-                Klosterweg 28, E406<br>
-                76131 Karlsruhe <br>
-            </p>
-            <p><strong>Vertreten durch:</strong><br>
-                Elias Schaut<br>
-            </p>
-            <p><strong>Kontakt:</strong><br>
-                E-Mail: eschaut@outlook.de<br>
+            <p>{{ this.impressum.name }}</p>
+
+            <p><b>Kontakt:</b><br>
+                E-Mail: {{ this.impressum.email }}<br>
+                Telefon: {{ this.impressum.number }}<br>
             </p>
         </div>
 
         <div id="privacy">
             <h3>Datenschutzerklärung</h3>
 
-            <p><strong>Was passiert mit den Angaben, die ich bei der Anmeldung angebe?</strong><br>
-                Wenn bei der Anmeldung auf „Bestätigen“ geklickt wird, werden alle hier gemachten Angaben an eine Datenbank auf dem Webserver von Dennis Kobert in Karlsruhe, Deutschland gesendet und dort bis zum Ende des Geburtstags, spätestens bis zum 05. Juni 2022 gespeichert.
-                Zum Zeitpunkt der Löschung der beschriebenen Daten wird auch diese Website mit stammt der <a href="/archive/wer-ist-dabeist-dabei">öffentlichen Gästeliste</a> offline gehen!
+            <p><b>Was passiert mit den Angaben, die ich bei der Anmeldung angebe?</b><br>
+                Wenn bei der Anmeldung auf „Bestätigen“ geklickt wird, werden alle hier gemachten Angaben an eine Datenbank auf dem Webserver von Elias Lorenz Schaut in Karlsruhe, Deutschland gesendet und dort spätestens zum Ende des Betreibens dieser Webseite gespeichert.
             </p>
 
-            <p><strong>Wer hat Zugriff auf meine Daten und warum?</strong><br>
-                Zugriff auf alle Angaben hat Elias Schaut, Dennis Kobert (Datenbankbetreiber) und die Personen, die sich um die Anmeldungen am Geburtstag selbst kümmern.
-                Falls der Hacken unter "Ich möchte nicht in der öffentlichen Gästeliste gelistet werden" nicht gesetzt wurde, ist der jeweilige Vorname und Nachname in der <a href="/archive/wer-ist-dabeist-dabei">öffentlichen Gästeliste</a> einsehbar!
+            <p><b>Wer hat Zugriff auf meine Daten und warum?</b><br>
+                Zugriff auf alle Angaben hat Elias Lorenz Schaut und die Personen, die sich um die Administration der Daten kümmert.
+                Falls der Hacken unter "Ich möchte nicht in der öffentlichen Gästeliste gelistet werden" nicht gesetzt wurde, ist der jeweilige Vorname und Nachname in der <router-link to="/guests">öffentlichen Gästeliste</router-link> einsehbar!
                 Die Daten aus der Anmeldung werden benötigt, um abschätzen zu können, in welchem Rahmen im Sinne von Anzahl Gäste/Schlafplätze/Lebensmittel und sonstigen Materialien geplant werden muss.
-                Die <a href="/archive/wer-ist-dabeist-dabei">öffentlichen Gästeliste</a> dient der Übersicht für die Gäste selbst, um besser abschätzen zu können, wer alles kommt.
+                Die <router-link to="/guests">öffentlichen Gästeliste</router-link> dient der Übersicht für die Gäste selbst, um besser abschätzen zu können, wer alles kommt.
             </p>
 
-            <p><strong>Analytics/Cookies/Externe-Ressourcen u.ä.?</strong><br>
+            <p><b>Analytics/Cookies/Externe-Ressourcen u.ä.?</b><br>
                 Diese Website selbst verwendet kein analytisches Tracking jeglicher Art.<br>
                 Diese Website verwendet Cookies, und zwar ausschließlich "Session Cookies", die die Benutzung der Website effektiver macht. Diese "Session Cookies" werden nach Ende der Browser-Sitzung automatisch gelöscht.<br>
-                Jedoch verwendet diese Website Google Fonts sowie die Bootstrap-Library. Diese speichern selbst aggregierte Daten über die Verwendung ihrer Dienste (wie zum Beispiel die Anzahl der Seitenaufrufe).
-                Personenbezogene Daten werden dabei jedoch nie weitergegeben.
+                Personenbezogene Daten werden niemals an dritte weitergegeben.
             </p>
 
-            <p><strong>Was sind meine Rechte?</strong><br>
+            <p><b>Was sind meine Rechte?</b><br>
                 Nach DSGVO und BDSG kannst du jederzeit Auskunft, Aktualisierung, Sperrung oder Löschung aller deiner Daten von uns verlangen.
-                Dein Ansprechpartner hierfür ist Elias Schaut. Außerdem bin ich verpflichtet, dich an dein Recht zu erinnern, dieser Zustimmung jederzeit zu widersprechen und dich ggf. bei einer Aufsichtsbehörde über mich zu beschweren ;-)
+                Dein Ansprechpartner hierfür ist der oben genannte betreiber dieser Webseite. Außerdem bin ich verpflichtet, dich an dein Recht zu erinnern, dieser Zustimmung jederzeit zu widersprechen und dich ggf. bei einer Aufsichtsbehörde über mich zu beschweren.
             </p>
         </div>
     </div>
@@ -48,7 +42,16 @@
 
 <script>
 export default {
-    name: "Privacy"
+    name: "Privacy",
+    data() {
+        return {
+            impressum: {
+                name: "Elias Lorenz Schaut",
+                email: "eschaut@web.de",
+                number: "+49 157-51714891",
+            }
+        }
+    }
 }
 </script>
 
