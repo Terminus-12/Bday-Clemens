@@ -31,7 +31,7 @@
         <img id="arrow-down" class="arrow" src="/svg/arrow-down-circle-fill.svg" alt="arrow-down">
         <div>
             <img id="arrow-right" class="arrow" src="/svg/arrow-right-circle-fill.svg" alt="arrow-right">
-            <a class="btn btn-success join_margin" type="button" href="https://nuudel.digitalcourage.de/kids-bday-tTADLGGaQ5aUSou6JZdX0Rg0U74SXI">Wähle deine Schicht!</a>
+            <router-link class="btn btn-success join_margin" type="button" to="/help">Wähle deine Schicht!</router-link>
             <img id="arrow-left" class="arrow" src="/svg/arrow-left-circle-fill.svg" alt="arrow-left">
         </div>
         <img id="arrow-up" class="arrow" src="/svg/arrow-up-circle-fill.svg" alt="arrow-up">
