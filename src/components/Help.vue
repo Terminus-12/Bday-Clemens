@@ -53,23 +53,23 @@ export default {
                         name: "Aufbau (Treffpunkt 14:45 Uhr)",
                         assists: [
                             {
-                                name: "Danny (LP)",
+                                name: "Max",
                                 time: "ab 14:45"
                             },
                             {
-                                name: "Niklas (LP)",
+                                name: "Mustermann",
                                 time: "ab 14:45"
                             },
                             {
-                                name: "Marc (LP)",
+                                name: "Linda",
                                 time: "ab 14:45"
                             },
                             {
-                                name: "Tim (K2-Bar)",
+                                name: "Sandra",
                                 time: "ab 14:45"
                             },
                             {
-                                name: "Tobi (K2-Bar)",
+                                name: "Thorsten",
                                 time: "ab 14:45"
                             },
                         ]
@@ -78,11 +78,11 @@ export default {
                         name: "Anmeldung",
                         assists: [
                             {
-                                name: "Mica (LP)",
+                                name: "Dimitri",
                                 time: "18:15 - 19:30"
                             },
                             {
-                                name: "Lorenz (LP)",
+                                name: "Heinz",
                                 time: "19:15 - 20:30"
                             }
                         ]
@@ -91,11 +91,11 @@ export default {
                         name: "Zapfstand",
                         assists: [
                             {
-                                name: "Sebi (F3)",
+                                name: "Raphael",
                                 time: "18:30 - 20:30"
                             },
                             {
-                                name: "Anton (F3)",
+                                name: "Max",
                                 time: "20:15 - 22:15"
                             }
                         ]
