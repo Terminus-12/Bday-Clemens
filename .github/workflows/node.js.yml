@@ -1,7 +1,7 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Node.js CI
+name: Vue to Github Pages
 
 on:
   push:
@@ -26,7 +26,24 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: npm install and build
-      run: |
-        npm install
-        npm run build --if-present
+    - name: Vue to Github Pages
+      # You may pin to the exact commit or the version.
+      # uses: xRealNeon/VuePagesAction@803b88b34a8c4177efad63425155f35419e3a9c6
+      uses: xRealNeon/VuePagesAction@1.0.1
+      with:
+        # Your username
+        username: EliasSchaut
+        # Your reponame
+        reponame: Web-Invite-Demo
+        # Your Github token
+        token: ${{ TOKEN_GITHUB }}
+        # Your git commit email
+        gitemail: e.schaut@outlook.de
+        # Your git commit name
+        gitname: EliasSchaut
+        # Your git commit message
+        gitmsg: pages update
+        # Your custom domain
+        cname: none
+        # Use yarn to build
+        useyarn: false
