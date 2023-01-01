@@ -74,7 +74,7 @@ export default {
                 img: ""
             },
             {
-                title: "Freigetränke und -essen!",
+                title: "Freigetränke und Essen!",
                 desc: "Genieße eine Auswahl an erfrischenden Getränken und Essen völlig frei! Wir haben für jeden Geschmack etwas dabei: Bier, Wein, Sekt, Softdrinks, Wasser, Kaffee, Tee, Limonade, etc. Zum Essen reichen wir selbstgemachte Burger, Chili con Carne und Kuchen!",
                 img: ""
             }],
