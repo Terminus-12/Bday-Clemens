@@ -48,34 +48,34 @@ export default {
             {
               title: "Unwiderstehlichen Westernlandschaft!",
               desc: "Versetzte dich in der nachgebauten Westernstadt die einzigartige Zeit des 'Wilden Westens' zurück!",
-              img: "img/.png"
+              img: "img/saloon.jpg"
+            },
+            {
+              title: "Lagerfeuer!",
+              desc: "Höre bei Dämmerung das Knistern des Holzes bei Lagerfeuerstimmung!",
+              img: "img/fire.jpeg"
             },
             {
                 title: "Karaoke (Ultrastar)",
                 desc: "Lass deine Stimmbänder zu epischer Karaoke vibrieren - mit einer Songauswahl von über 5.000 Songs an 4 Mikros bis 1 Uhr!<br>" +
                     "Song Liste: <a href=\"https://schaut.dev/p/ultrastar/\">https://schaut.dev/p/ultrastar/</a>",
-                img: "img/.png"
+                img: ""
             },
             {
                 title: "Deine Wunschmusik!",
                 desc: "Reiche vorab deine Musik ein genieße deine Songs auf der Party! " +
                     "Füge dazu Songs der folgenden Youtube-Playlist hinzu: <a href=\"https://www.youtube.com/playlist?list=PLcvH4NFVrtUinn_GklT_iMMBks_6KtgSW&jct=Ef1Tj8sobrkZl6d0CWEDw69MA_9f9Q\" target='_blank'>YouTube</a>",
-                img: "img/.png"
+                img: ""
             },
             {
                 title: "Minigames!",
                 desc: "Von Hufeisenwerfen bis zum Baumstamm-Nageln - es gibt viele Minigames für Jedermann auf dem Gelände verteilt!",
-                img: "img/.png"
-            },
-            {
-                title: "Lagerfeuer!",
-                desc: "Höre bei Dämmerung das Knistern des Holzes bei Lagerfeuerstimmung!",
-                img: "img/.png"
+                img: ""
             },
             {
                 title: "Freigetränke",
                 desc: "Genieße eine Auswahl an erfrischenden Getränken völlig frei! Wir haben für jeden Geschmack etwas dabei: Bier, Wein, Sekt, Softdrinks, Wasser, Kaffee, Tee, Limonade, etc.",
-                img: "img/.png"
+                img: ""
             }],
 
             join_title: "Registriere dich jetzt!",

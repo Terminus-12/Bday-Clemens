@@ -20,7 +20,7 @@
             </p>
 
             <p><b>Wer hat Zugriff auf meine Daten und warum?</b><br>
-                Zugriff auf alle Angaben hat Elias Lorenz Schaut und die Personen, die sich um die Administration der Daten kümmert.
+                Zugriff auf alle Angaben hat Elias Lorenz Schaut, Clemens Lorenz Schaut und die Personen, die sich um die Administration der Daten kümmert.
                 Falls der Hacken unter "Ich möchte nicht in der öffentlichen Gästeliste gelistet werden" nicht gesetzt wurde, ist der jeweilige Vorname und Nachname in der <router-link to="/guests">öffentlichen Gästeliste</router-link> einsehbar!
                 Die Daten aus der Anmeldung werden benötigt, um abschätzen zu können, in welchem Rahmen im Sinne von Anzahl Gäste/Schlafplätze/Lebensmittel und sonstigen Materialien geplant werden muss.
                 Die <router-link to="/guests">öffentlichen Gästeliste</router-link> dient der Übersicht für die Gäste selbst, um besser abschätzen zu können, wer alles kommt.
