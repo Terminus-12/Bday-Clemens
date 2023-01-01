@@ -87,35 +87,11 @@ export default {
             form: {
                 checkboxes: [
                     {
-                        name: "need_bed",
-                        label: "Ich brauche einen Schlafplatz"
-                    },
-                    {
-                        name: "has_bed",
-                        label: "Ich kann einen Schlafplatz anbieten"
-                    },
-                    {
-                        name: "is_nerd",
-                        label: "Ich will bei einem nerdigen Spiel teilnehmen"
-                    },
-                    {
                         name: "anonym",
                         label: "Ich möchte <b>nicht</b> in der <router-link to=\"/guests/\">öffentlichen Gästeliste</router-link> gelistet werden"
                     }
                 ],
                 modals: [
-                    {
-                        ref: "need_bed",
-                        title: "Achtung!",
-                        body: "Die Schlafplätze sind streng limitiert und sollten nur von Gästen benutzt werden, die einen wirklich langen Weg nach Hause haben. Wenn du in Karlsruhe oder naher Umgebung wohnst, wäre es gut, von einem Schlafplatz abzusehen!",
-                        button: "Verstanden!"
-                    },
-                    {
-                        ref: "is_nerd",
-                        title: "Achtung!",
-                        body: "Dieses Spiel ist nur für Hardcore-Nerds geeignet und stellt eine Meta-Ebene über mehrere Stunden des Geburtstags dar!<br>Wenn du also eher chillen willst, dann ist dieses Spiel wahrscheinlich nichts für dich! Wenn du aber auf Spiele wie <i>Secret Hitler</i> stehst, dann bist du herzlich eingeladen!",
-                        button: "Verstanden!"
-                    }
                 ],
                 submit: {
                     name: "Bestätigen",

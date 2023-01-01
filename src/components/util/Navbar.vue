@@ -1,7 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
-            <router-link class="navbar-brand" to="/">Elias Geburtstag</router-link>
+            <router-link class="navbar-brand" to="/">Clemens Geburtstag</router-link>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,9 +14,6 @@
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" to="/details">Details</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link class="nav-link" to="/help">Schichten</router-link>
                     </li>
                     <li class="nav-item">
                         <router-link class="nav-link" to="/privacy">Datenschutz</router-link>
