@@ -22,7 +22,7 @@
         </div>
 
         <p class="capture center huge handwritten"><b>{{ join_title }}</b></p>
-        <p class="center" v-html="join_desc"></p>
+        <p class="center">Lies auch weitere Informationen zur Party in den <router-link to="/details">Details</router-link></p>
 
         <div class="arrows">
             <img id="arrow-down" class="arrow" src="/svg/arrow-down-circle-fill.svg" alt="arrow-down">
@@ -74,13 +74,12 @@ export default {
                 img: ""
             },
             {
-                title: "Freigetränke",
-                desc: "Genieße eine Auswahl an erfrischenden Getränken und Essen völlig frei! Wir haben für jeden Geschmack etwas dabei: Bier, Wein, Sekt, Softdrinks, Wasser, Kaffee, Tee, Limonade, etc. Zum Essen reichen wir selbstgemachte Burger und Chili con Carne!",
+                title: "Freigetränke und -essen!",
+                desc: "Genieße eine Auswahl an erfrischenden Getränken und Essen völlig frei! Wir haben für jeden Geschmack etwas dabei: Bier, Wein, Sekt, Softdrinks, Wasser, Kaffee, Tee, Limonade, etc. Zum Essen reichen wir selbstgemachte Burger, Chili con Carne und Kuchen!",
                 img: ""
             }],
 
             join_title: "Registriere dich unbedingt jetzt!",
-            join_desc: "Ließ auch weite Informationen zur Party in den <a href=\"/details\">Details</a>",
             join: "JOIN NOW"
         }
     }

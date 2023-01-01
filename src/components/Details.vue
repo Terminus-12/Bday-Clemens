@@ -13,7 +13,7 @@ export default {
             details: [
                 {
                     title: "Eckdaten",
-                    value: "<ul><li><b>Datum</b>: 25. Februar 2023</li><li><b>Uhrzeit</b>: Start 16 Uhr für Familie; 19 Uhr für Freunde</li><li><b>Adresse</b>: Weidweg 9; 68782 Brühl</li></ul>"
+                    value: "<ul><li><b>Datum</b>: 25. Februar 2023</li><li><b>Uhrzeit</b>: Start 16 Uhr für Familie; 19 Uhr für Freunde</li><li><b>Adresse</b>: Buffalo's Country Club Brühl e. V.<br>Weidweg 9, 68782 Brühl</li></ul>"
                 },
                 {
                     title: "FAQ",
