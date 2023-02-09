@@ -76,7 +76,7 @@ export default {
     name: "Join",
     data() {
         return {
-            api_base: "https://api.schaut.dev/bday/",
+            api_base: "https://winvite.schaut.dev/api/",
 
             status: {
                 error: "Error! Es gab einen Fehler bei der Anmeldung! Du bist noch nicht registriert!",

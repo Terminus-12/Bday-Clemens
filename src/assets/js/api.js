@@ -1,7 +1,7 @@
 
 
 export async function add_member(base, data) {
-    return fetch(base + 'member', {
+    return fetch(base + 'guest', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
@@ -11,9 +11,9 @@ export async function add_member(base, data) {
 }
 
 export async function get_members(base) {
-    return fetch(base + 'members/public')
+    return fetch(base + 'guests/public')
 }
 
 export async function get_members_counter(base) {
-    return fetch(base + 'members/count')
+    return fetch(base + 'guests/count')
 }

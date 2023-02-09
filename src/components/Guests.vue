@@ -53,7 +53,7 @@ export default {
                 list: ref([])
             },
 
-            api_base: "https://api.schaut.dev/bday/",
+            api_base: "https://winvite.schaut.dev/api/",
 
             status: {
                 success: "Du hast dich erfolgreich registriert!",
